@@ -5,20 +5,17 @@
 </template>
 
 <script>
-// import Hello from './components/Hello'
 import Caisse from './components/Caisse'
 
 export default {
   name: 'app',
-  components: {
-    Caisse
-  }
+  components: {Caisse}
 }
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

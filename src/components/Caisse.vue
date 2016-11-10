@@ -7,6 +7,10 @@
 #caisse-table td {
   padding: 1rem 0.5rem;
 }
+
+#caisse-total td {
+  text-align: right;
+}
 </style>
 
 <template>
@@ -38,20 +42,17 @@
 <script>
 export default {
   name: 'caisse',
-  data () {
-    return {
-      items: [
-        {name: 'Barbie', qte: 1, price: 19.95},
-        {name: 'Ken', qte: 1, price: 19.75}
-      ]
+  computed: {
+    items () {
+      return this.$store.state.items
     }
   },
   methods: {
     add_item (e) {
-      this.items.push({name: 'Nouveau', qte: 1, price: 100})
+      this.$store.commit('add_item')
     },
     remove_item (e) {
-      this.items.splice(e.target.dataset.index, 1)
+      this.$store.commit('remove_item', {index: e.target.dataset.index})
     },
     calculateSubTotal () {
       let total = 0
