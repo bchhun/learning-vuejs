@@ -12,7 +12,8 @@
   "dependencies": {
     "node-sass": "^3.11.2",
     "sass-loader": "^4.0.2",
-    "vue": "^2.0.1"
+    "vue": "^2.0.1",
+    "vuex": "^2.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
