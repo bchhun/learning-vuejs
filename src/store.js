@@ -13,7 +13,7 @@ export default new Vuex.Store({
   mutations: {
     add_item (state) {
       state.items.push(
-        {name: 'Nouveau', qte: 1, price: 100}
+        {name: 'New', qte: 1, price: 100}
       )
     },
     remove_item (state, { index }) {

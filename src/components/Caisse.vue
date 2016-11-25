@@ -18,20 +18,20 @@
     <table id="caisse-table">
       <tr>
         <th>Item</th>
-        <th>Quantité</th>
-        <th>Prix à l'unité</th>
-        <th><button @click="add_item">Ajouter un item</button></th>
+        <th>Quantity</th>
+        <th>Unit price</th>
+        <th><button @click="add_item">Add an item</button></th>
       </tr>
       <tr v-for="(item, index) in items">
         <td><input type="text" v-model="item.name"></td>
         <td><input type="number" v-model="item.qte"></td>
         <td><input type="number" v-model="item.price"></td>
-        <td><button :data-index="index" @click="remove_item">Supprimer</button></td>
+        <td><button :data-index="index" @click="remove_item">Delete</button></td>
       </tr>
     </table>
     <hr />
     <table id="caisse-total">
-      <tr><td>Sous-total:</td><td>{{ calculateSubTotal() | currency }}</td></tr>
+      <tr><td>Subtotal:</td><td>{{ calculateSubTotal() | currency }}</td></tr>
       <tr><td>TPS:</td><td>{{ calculateTPS() | currency }}</td></tr>
       <tr><td>TVQ:</td><td>{{ calculateTVQ() | currency }}</td></tr>
       <tr><td>Total:</td><td>{{ calculateTotal() | currency }}</td></tr>
