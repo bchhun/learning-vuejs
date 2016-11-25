@@ -68,7 +68,7 @@ export default {
     calculateTVQ () {
       const tvq = 0.09975
 
-      return (this.calculateSubTotal() + this.calculateTPS()) * tvq
+      return this.calculateSubTotal() * tvq
     },
     calculateTotal () {
       return this.calculateSubTotal() + this.calculateTPS() + this.calculateTVQ()
